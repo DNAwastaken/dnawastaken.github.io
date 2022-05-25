@@ -66,22 +66,30 @@ body {
 
 /* Projects CSS */
 
-#projects-wrapper {
+#projects-grid {
   --grid-item-border-color: royalblue;
-  
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+
   border: 1px solid black;
   padding: 10px;
   margin: 5px;
-}
-
-#projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
 }
 
 .projects-grid-item {
   border: 3px solid var(--grid-item-border-color, royalblue);
   border-radius: 0.4rem;
   padding: 5px;
+}
+
+.projects-grid-item p:first-child {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.projects-grid-item p:last-child {
+  margin: 0 auto 10px 0.5rem;
 }
